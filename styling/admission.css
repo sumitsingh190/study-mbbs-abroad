@@ -1,0 +1,85 @@
+/* Global Section Styling */
+.admission-process {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Steps Container */
+.steps-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Step Cards */
+.step-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Step Icons */
+.step-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin: 0 auto 20px;
+}
+
+/* Gradient Backgrounds for Icons */
+.bg-gradient-primary { background: linear-gradient(135deg, #007bff, #6610f2); }
+.bg-gradient-success { background: linear-gradient(135deg, #28a745, #20c997); }
+.bg-gradient-danger { background: linear-gradient(135deg, #dc3545, #fd7e14); }
+.bg-gradient-warning { background: linear-gradient(135deg, #ffc107, #ff851b); }
+.bg-gradient-info { background: linear-gradient(135deg, #17a2b8, #1e90ff); }
+.bg-gradient-dark { background: linear-gradient(135deg, #343a40, #6c757d); }
+
+/* Step Titles */
+.step-card h4 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Step Text */
+.step-card p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .steps-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}

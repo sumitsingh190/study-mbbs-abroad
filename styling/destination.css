@@ -1,0 +1,98 @@
+/* Overall Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Destination Cards */
+.destination-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+    background: #fff;
+}
+
+.destination-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+}
+
+.destination-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 15px;
+}
+
+.destination-card:hover .destination-img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+    border-radius: 15px;
+    transition: background 0.4s ease;
+}
+
+.destination-card:hover .overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.card-body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.card-body h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.card-body p {
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+/* Text Color Change on Hover */
+.destination-card:hover .card-body h4,
+.destination-card:hover .card-body p {
+    color: #f0f0f0;
+}
+
+.card-body p.mb-0 {
+    opacity: 0.8;
+}
+
+/* Bootstrap Grid Optimization */
+.row-cols-md-3 .col {
+    margin-bottom: 20px;
+}
+
+/* Add More Responsive Font Sizes */
+@media (max-width: 768px) {
+    .card-body h4 {
+        font-size: 1.25rem;
+    }
+    .card-body p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hover Effect */
+.card:hover .overlay {
+    opacity: 0.7;
+}
+

@@ -1,0 +1,60 @@
+.hero {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), 
+            url('../pictures/background.png') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    min-height: 100vh; /* Ensures full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.hero h1, .hero p, .hero a {
+    position: relative;
+    z-index: 1;
+}
+.hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInDown 1.2s ease-in-out;
+}
+.hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: auto;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+.hero .btn {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hero .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(255, 87, 34, 0.6);
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Additional Fixes */
+.btn-primary {
+    background-color: #ff5722;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #e64a19;
+}
